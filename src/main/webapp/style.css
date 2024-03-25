@@ -1,0 +1,300 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: puvi;
+    transition: 0.5s;
+    color: white;
+}
+
+body{
+    height: 100vh;
+    background: #3fbce7 linear-gradient(180deg,#3fbce7,#4a51d3);
+    /* background: linear-gradient(315deg, rgba(49, 178, 243, 1), rgba(0, 0, 123, 0.6)); */
+    background-attachment: fixed;
+}
+@font-face {
+    font-family: puvi;
+    src: url(Font/Zoho\ Puvi\ Regular.otf);
+}
+
+#header{
+    /* background-image: radial-gradient( #31B2F3, #1B57F1, #31B2F3); */
+    /* background: linear-gradient(45deg, #31B2F3, blue, #31B2F3); */
+
+    /* background-color: rgba(0,0,0,0.5); */
+    height: 7%;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2%;
+    backdrop-filter: blur(30px);
+}
+.logo{
+    height: 90%;
+}
+.tryNow{
+    font-size: 20px;
+    font-weight: bolder;
+    display: flex;
+    text-decoration: none;
+    height: 60%;
+    width: 10%;
+    background: white;
+    color: #1b57f1ba;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.tryNow:hover{
+    
+    background-color: #1b57f1ba;
+    color: white;
+}
+#introSection{
+    height: 100vh;
+    /* background-color: #31B2F3; */
+    color: aliceblue;
+    text-align: center;
+    padding: 4% 14% 0 14%;
+} 
+
+#introQuote{
+    font-size: 60px;
+    padding: 0 10%;
+}
+
+#introContent{
+    width: 100%;
+    padding: 3% 7%
+}
+
+#introDescription{
+    font-size: 20px;
+    padding: 2% 19%;
+}
+
+/* #introPic1{
+   display: inline;
+   width: 70%;
+ */
+.introPic{
+    height: 50%;
+    width: 70%;
+    display: none;
+    opacity: 0;
+    animation: fadeInOut 1s ease infinite;
+    border-radius: 20px;
+}
+
+
+.visible {
+    display: inline;
+    opacity: 1;
+    animation: fadeIn 1s ease; 
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+#featureSection{
+    height: 200vh;
+    /* background-color: #1B57F1; */
+    display: flex;
+    align-items: normal;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 5%;
+    color: white;
+}
+
+.features{
+    height: 25%;
+    width: 45%;
+    /* background-color: white; */
+    /* border: 2px solid black; */
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.featureHeadLine{
+    font-size: 50px;
+    text-align: left;
+}
+
+.featureDescription{
+    font-size: 25px;
+}
+
+.accessLink{
+}
+.accessButton{
+    height: 40px;
+    width: 180px;
+    background-color: white;
+    border: none;
+    color: #1b57f1ba;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.accessButton:hover{
+    background-color: #1b57f1ba;
+    color: white;
+}
+
+#featureTitle{
+    height: 8%;
+    width: 70%;
+    text-align: center;
+    font-size: 60px;
+}
+
+.featurePicture{
+    height: 90%;
+    width: 60%;
+    margin: 2% 20%;
+    border-radius: 30px;
+}
+
+#contactSection{
+    height: 40vh;
+    background-color: #333;
+    display: flex;
+    overflow: hidden;
+    /* height: 80vh; */
+    justify-content: center;
+    flex-direction: column;
+    padding: 2.5% 2%;
+    /* align-items: center; */
+}
+
+.contacts{
+    height: 84%;
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 2%;
+}
+
+.contactPic{
+    height: 50%;
+    border-radius: 50%;
+}
+
+#contact1{
+    display: flex;
+}
+
+.zohoMail{
+    height: 29px;
+    margin-right: 1%;
+    /* margin-lefisplay: flex;t: 11%; */
+}
+
+.gMail{
+    height: 25px;
+    margin-top: 2%;
+}
+
+.insta{
+    height: 29px;
+    /* margin: -3.7% 0; */
+}
+
+.zohoMail,.gMail, .insta:hover{
+    cursor: pointer;
+}
+
+.gMail:hover + .gMailId{
+    display: flex;
+   justify-content: center;
+}
+.zohoMail:hover + .zMailId{
+    display: flex;
+    justify-content: center;
+}
+
+.gMailId:hover{
+    /* display: inline; */
+    display: block;
+    position: fixed;
+}
+.mailId{
+    display: none;
+    position: absolute;
+    /* border: 1px solid; */
+    width: 15%;
+    text-align: center;
+    margin-top: 3%;
+}
+
+.cursor:hover{
+    cursor: pointer;
+}
+
+.insta:hover + .instaRoot{
+    display: flex;
+    justify-content: center;
+}
+
+.wayToContact{
+    width: 40%;
+    text-align: center;
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.name{
+    margin-top: 4%;
+}
+
+/* .featurePicture {
+    animation: slideIn 4s infinite; 
+} */
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%) translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%) translateX(0%);
+    }
+}
+
+.featurePicture:hover, .introPic:hover{
+    transform: scale(1.1);
+}

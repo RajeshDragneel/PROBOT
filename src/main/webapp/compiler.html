@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ProBot</title>
+    <link rel="stylesheet" href="compiler.css" type="text/css"/>
+    <script src="https://kit.fontawesome.com/ec367a52fe.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.5.3/ace.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/guesslang-js@latest/dist/lib/guesslang.min.js"></script>
+    
+</head>
+<body>
+	<button class="chatbotToggler">
+      <span class="material-symbols-rounded">mode_comment</span>
+      <span class="material-symbols-outlined">close</span>
+      <img src="images/AiChatIcon.svg" id="chatIcon" >
+    </button>
+    <header>
+		<a class="logo" href="index.html"> <span id="logoImage"></span></a>
+		<div id="optionHolder">
+			<span class="options cursor" id="beautify" onclick="beautify()">Beautify</span>
+			<label for="uploadButton" class="options cursor" id="upload">Upload <i class="fa-solid fa-upload"></i></label>
+            <input type="file" id="uploadButton" onChange="handleFileChange()" style="display: none;">
+			 <span class="options cursor"
+				id="download" onclick="downloadCode()">Download<i
+				class="fa-solid fa-download"></i></span>
+		</div>
+	</header>
+	<section id="mainArea">
+		<div id="input">
+			<p id="inputHeader">Input</p>
+			<div id="inputArea" class="editor-container" >
+      		<div id="editor" ></div>
+    		</div>
+			<!-- <textarea name="input" id="inputArea" cols="30" rows="10"></textarea> -->
+		</div>
+
+		<div id="languageMenuHolder">
+			<div id="languageMenu">
+				<button id="run" class="cursor" onclick="addAndRemoveWaitInRun(); setTimeout(scannerListener, 5000);execute();"><span id="runTest">Run</span><img id="runLoading" src="images/loading .svg" style="height:70%; display: none; transform: scaleX(-1);" class="fa-spin" ></button>
+
+				
+				<!-- java -->
+				<span class="langIcons chosenLanguage" id="java">
+					<i class="fa-brands fa-java"></i>
+				</span>
+
+				<!-- JS -->
+				<span class="langIcons hide" id="javascript"> JS </span>
+
+				<!-- C -->
+				<span class="langIcons hide" id="c">
+					<i class="fa-solid fa-c"></i>
+				</span>
+
+				<!-- Python -->
+				<span class="langIcons hide" id="python">
+				<i class="fa-brands fa-python"></i>
+				</span>
+
+				<!-- C++ -->
+				<span class="langIcons hide" id="cpp"> C++ </span>
+			</div>
+		</div>
+		<div id="output">
+			<p id="outputHeader">Output<span id="clearBtn" onclick="clearOutputArea()">Clear</span></p>
+			<div id="outputArea">
+        </div>
+        <input type="text" id="inputTag" placeholder="Input field">
+		</div>
+	</section>
+
+    <div id="chatContainer">
+    <div class="chatbot">
+      <div id="header">
+        <h2><span style="color:#1B57F1;">Pro</span><span style="color: white;">Bot</span></h2>
+      </div>
+      <ul class="chatbox">
+        <li class="chat incoming">
+          <span class="roboImg"></span>
+          <p>Hi there &#128075<br>How can I help you today?</p>
+        </li>
+      </ul>
+      <div class="chatInput">
+        <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+        <span id="send-btn" class="material-symbols-rounded">send</span>
+      </div>
+    </div>
+   </div>
+    
+</body>
+<script src="compiler.js"></script>
+</html>
